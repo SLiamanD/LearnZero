@@ -23,5 +23,20 @@ class SettingsViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+
+
+        
+        
+        // Navigation Bar:
+//        navigationController?.navigationBar.barTintColor = UIColor.gray
+
+        // back button chose color
+        
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.black
+
+    }
+    
 
 }

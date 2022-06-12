@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         
         
         // Navigation Bar:
-        navigationController?.navigationBar.barTintColor = UIColor.gray
+//        navigationController?.navigationBar.barTintColor = UIColor.gray
 
         // back button chose color
         
