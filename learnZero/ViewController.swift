@@ -14,12 +14,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("this is a new feature")
-        // )))
-        // add a comment
-        // add a new comment
-        // and new
-        // and new and new 
         
         avatarOutlet.layer.cornerRadius = avatarOutlet.frame.size.width / 7
         avatarOutlet.clipsToBounds = true
