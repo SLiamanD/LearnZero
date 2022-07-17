@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C824698728846719001B26ED /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C824698628846718001B26ED /* .gitignore */; };
 		C8A25629280C3FAD005DDF47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A25628280C3FAD005DDF47 /* AppDelegate.swift */; };
 		C8A2562B280C3FAD005DDF47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A2562A280C3FAD005DDF47 /* SceneDelegate.swift */; };
 		C8A2562D280C3FAD005DDF47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A2562C280C3FAD005DDF47 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C824698628846718001B26ED /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		C8A25625280C3FAD005DDF47 /* learnZero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = learnZero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8A25628280C3FAD005DDF47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8A2562A280C3FAD005DDF47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,8 +48,9 @@
 		C8A2561C280C3FAD005DDF47 = {
 			isa = PBXGroup;
 			children = (
-				C8A25627280C3FAD005DDF47 /* learnZero */,
 				C8A25626280C3FAD005DDF47 /* Products */,
+				C8A25627280C3FAD005DDF47 /* learnZero */,
+				C824698628846718001B26ED /* .gitignore */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C824698728846719001B26ED /* .gitignore in Resources */,
 				C8A25635280C3FB0005DDF47 /* LaunchScreen.storyboard in Resources */,
 				C8A25632280C3FB0005DDF47 /* Assets.xcassets in Resources */,
 				C8A25630280C3FAD005DDF47 /* Main.storyboard in Resources */,
