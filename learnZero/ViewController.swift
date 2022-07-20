@@ -35,14 +35,24 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
     }
     @IBAction func tapAction(_ sender: UIButton) {
-        let allert = UIAlertController(title: "title", message: "message string", preferredStyle: .alert)
-        let action = UIAlertAction(title: "ok", style: .default, handler: { (action) in
-            let text = allert.textFields?.first?.text
-            print(text ?? "nil")
-        })
-        allert.addTextField(configurationHandler: nil)
-        allert.addAction(action)
-        self.present(allert, animated: true, completion: nil)
+        //Variable to store alertTextField
+        var textField = UITextField()
+        
+        let alert = UIAlertController(title: "Add new item", message: "", preferredStyle: .alert)
+        alert.addTextField { alertTextField in
+            alertTextField.placeholder = "Create new item"
+            
+            //Copy alertTextField in local variable to use in current block of code
+            textField = alertTextField
+        }
+        
+        let action = UIAlertAction(title: "Add item", style: .default) { action in
+            //Prints the alertTextField's value
+            print(textField.text!)
+        }
+        
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
     
     
