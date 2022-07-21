@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        var labelText = hiLabel.text
 
         
         
@@ -49,11 +49,10 @@ class ViewController: UIViewController {
         let action = UIAlertAction(title: "Add item", style: .default) { action in
             //Prints the alertTextField's value
             print(textField.text!)
+            self.hiLabel.text! += " " + textField.text! + "!"
         }
         
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
-    
-    
 }
