@@ -19,16 +19,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var labelText = hiLabel.text
-
-        
         
         tapOutlet.backgroundColor = .green
         tapOutlet.frame.size.width = 50
         tapOutlet.frame.size.height = 50
-//        tapOutlet.layer.cornerRadius = 16
-//        tapOutlet.layer.masksToBounds = false
         tapOutlet.layer.cornerRadius = tapOutlet.frame.size.height / 3
+        
+        hiLabel.isHidden = true
+        
+        
+
         
         
     }
@@ -38,15 +38,15 @@ class ViewController: UIViewController {
         //Variable to store alertTextField
         var textField = UITextField()
         
-        let alert = UIAlertController(title: "Add new item", message: "", preferredStyle: .alert)
+        let alert = UIAlertController(title: "WELCOME!", message: "", preferredStyle: .alert)
         alert.addTextField { alertTextField in
-            alertTextField.placeholder = "Create new item"
+            alertTextField.placeholder = "enter your name please"
             
             //Copy alertTextField in local variable to use in current block of code
             textField = alertTextField
         }
         
-        let action = UIAlertAction(title: "Add item", style: .default) { action in
+        let action = UIAlertAction(title: "say hi", style: .default) { action in
             //Prints the alertTextField's value
             print(textField.text!)
             self.hiLabel.text! += " " + textField.text! + "!"
@@ -54,5 +54,6 @@ class ViewController: UIViewController {
         
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
+        hiLabel.isHidden = false
     }
 }
