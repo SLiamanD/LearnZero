@@ -14,6 +14,7 @@
 		C8A25630280C3FAD005DDF47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8A2562E280C3FAD005DDF47 /* Main.storyboard */; };
 		C8A25632280C3FB0005DDF47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8A25631280C3FB0005DDF47 /* Assets.xcassets */; };
 		C8A25635280C3FB0005DDF47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8A25633280C3FB0005DDF47 /* LaunchScreen.storyboard */; };
+		C8CED3B52889BE5A00BEE766 /* SecondViewContrpoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CED3B42889BE5A00BEE766 /* SecondViewContrpoller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		C8A25631280C3FB0005DDF47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8A25634280C3FB0005DDF47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8A25636280C3FB0005DDF47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8CED3B42889BE5A00BEE766 /* SecondViewContrpoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewContrpoller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				C8A25628280C3FAD005DDF47 /* AppDelegate.swift */,
 				C8A2562A280C3FAD005DDF47 /* SceneDelegate.swift */,
 				C8A2562C280C3FAD005DDF47 /* ViewController.swift */,
+				C8CED3B42889BE5A00BEE766 /* SecondViewContrpoller.swift */,
 				C8A2562E280C3FAD005DDF47 /* Main.storyboard */,
 				C8A25633280C3FB0005DDF47 /* LaunchScreen.storyboard */,
 				C8A25631280C3FB0005DDF47 /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8A2562D280C3FAD005DDF47 /* ViewController.swift in Sources */,
+				C8CED3B52889BE5A00BEE766 /* SecondViewContrpoller.swift in Sources */,
 				C8A25629280C3FAD005DDF47 /* AppDelegate.swift in Sources */,
 				C8A2562B280C3FAD005DDF47 /* SceneDelegate.swift in Sources */,
 			);

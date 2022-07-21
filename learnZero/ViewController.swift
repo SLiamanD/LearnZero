@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         hiLabel.isHidden = true
         startGameOutlet.isHidden = true
+        startGameOutlet.setTitle("продолжить", for: .normal)
         
 
         
@@ -39,9 +40,9 @@ class ViewController: UIViewController {
         //Variable to store alertTextField
         var firstTextField = UITextField()
         var secondTextField = UITextField()
-        let alert = UIAlertController(title: "WELCOME!", message: "", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Добро пожаловать!", message: "давайте знакомиться", preferredStyle: .alert)
         alert.addTextField { alertTextField in
-            alertTextField.placeholder = "enter your name"
+            alertTextField.placeholder = "введите пожалуйста ваше имя"
             
             //Copy alertTextField in local variable to use in current block of code
             firstTextField = alertTextField
@@ -51,9 +52,9 @@ class ViewController: UIViewController {
         }
         
         var tappedOnTextField = false
-        let action = UIAlertAction(title: "say hello", style: .default) { action in
+        let action = UIAlertAction(title: "познакомиться", style: .default) { action in
             tappedOnTextField = true
-            self.hiLabel.text! = "Welcome," + " " + firstTextField.text! + "!"
+            self.hiLabel.text! = "Привет," + " " + firstTextField.text! + "!"
             if tappedOnTextField == true {
                 self.hiLabel.isHidden = false
                 self.startGameOutlet.isHidden = false

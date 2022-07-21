@@ -32,7 +32,7 @@
                                 </state>
                                 <connections>
                                     <action selector="startGameButton:" destination="04c-le-psq" eventType="touchUpInside" id="zZ5-ja-SNA"/>
-                                    <segue destination="oSM-e8-XNH" kind="showDetail" id="rHl-IB-Xam"/>
+                                    <segue destination="oSM-e8-XNH" kind="show" id="Wv1-lc-BHB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -54,22 +54,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OAb-55-Aai" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="04c-le-psq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-3399" y="-2439"/>
+            <point key="canvasLocation" x="-4198" y="-2427"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="qId-tB-Sul">
             <objects>
-                <viewController id="oSM-e8-XNH" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="oSM-e8-XNH" customClass="SecondViewController" customModule="learnZero" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Q1-Tf-x8y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="giw-na-gBy"/>
                         <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="eEY-7k-MCU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Huq-DQ-NNv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2439" y="-2439"/>
+            <point key="canvasLocation" x="-3345" y="-2427"/>
         </scene>
     </scenes>
     <resources>
