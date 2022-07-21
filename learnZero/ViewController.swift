@@ -10,6 +10,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var hiLabel: UILabel!
+    @IBOutlet weak var startGameOutlet: UIButton!
+    
     
     
     
@@ -19,6 +21,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hiLabel.isHidden = true
+        startGameOutlet.isHidden = true
         
 
         
@@ -53,6 +56,7 @@ class ViewController: UIViewController {
             self.hiLabel.text! = "Welcome," + " " + firstTextField.text! + "!"
             if tappedOnTextField == true {
                 self.hiLabel.isHidden = false
+                self.startGameOutlet.isHidden = false
             }
         }
         
