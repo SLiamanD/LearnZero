@@ -17,17 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qe9-hE-Rl2" customClass="CustomButton">
-                                <rect key="frame" x="114" y="309.5" width="147" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="TAP TO ME">
-                                    <color key="titleColor" systemColor="labelColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="tapAction:" destination="5tF-s2-zOv" eventType="touchUpInside" id="Ctb-dJ-mp6"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaR-8h-Kpc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HI" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaR-8h-Kpc">
                                 <rect key="frame" x="108" y="64" width="159" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
@@ -39,25 +29,34 @@
                         <constraints>
                             <constraint firstItem="ZaR-8h-Kpc" firstAttribute="top" secondItem="rmM-oZ-Jeb" secondAttribute="top" constant="64" id="WGL-hY-nYe"/>
                             <constraint firstItem="rmM-oZ-Jeb" firstAttribute="trailing" secondItem="ZaR-8h-Kpc" secondAttribute="trailing" constant="108" id="YXw-oX-uus"/>
-                            <constraint firstItem="qe9-hE-Rl2" firstAttribute="centerY" secondItem="8aJ-IA-4T0" secondAttribute="centerY" id="qGt-Xg-yYo"/>
                             <constraint firstItem="ZaR-8h-Kpc" firstAttribute="leading" secondItem="rmM-oZ-Jeb" secondAttribute="leading" constant="108" id="sF5-sC-1L1"/>
-                            <constraint firstItem="qe9-hE-Rl2" firstAttribute="centerX" secondItem="8aJ-IA-4T0" secondAttribute="centerX" id="sgu-Pl-JFS"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="hiLabel" destination="ZaR-8h-Kpc" id="oZZ-fb-8lS"/>
-                        <outlet property="tapOutlet" destination="qe9-hE-Rl2" id="Ves-be-hHa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OAb-55-Aai" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2071" y="-1851"/>
+            <point key="canvasLocation" x="-2841" y="-1950"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ama-ZB-LBv">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sip-qT-Zwv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="2H6-kX-ReZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oDY-fJ-d7P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="M2O-Ks-uz6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-2014" y="-1951"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
