@@ -19,7 +19,7 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         sumOutlet.isHidden = true
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         
     }
@@ -38,21 +38,26 @@ class SecondViewController: UIViewController {
             //Copy alertTextField in local variable to use in current block of code
             secondTextField = alertTextField
         }
-        var nonOptSecondTextField = Int(secondTextField.text!) ?? 0
-        var nonoptFirstTextField = Int(firstTextField.text!) ?? 0
-        var sum = nonOptSecondTextField + nonoptFirstTextField
+
         var tappedOnTextField = false
         let action = UIAlertAction(title: "посчитать", style: .default) {
-        action in
-        tappedOnTextField = true
-        if tappedOnTextField == true { self.sumOutlet.isHidden = false }
-            if sum != 0 {self.sumOutlet?.text! = String(sum)
-            } else {self.sumOutlet?.text! = "перезапустите пожадуйтса экран свайпом"
+            action in
+            tappedOnTextField = true
+            if tappedOnTextField == true {
+                self.sumOutlet.isHidden = false
+                var nonOptSecondTextField = Int(secondTextField.text!) ?? 0
+                var nonOptFirstTextField = Int(firstTextField.text!) ?? 0
+                var sum = nonOptSecondTextField + nonOptFirstTextField
+                if sum != 0 {
+                    self.sumOutlet?.text! = String(sum)
+                } else { self.sumOutlet?.text! = "перезапустите пожадуйтса экран свайпом"
+                }
             }
+            
         }
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
-    
+        
     }
 }
 
