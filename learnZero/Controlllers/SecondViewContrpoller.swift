@@ -10,11 +10,6 @@ import UIKit
 
 class SecondViewController: UIViewController {
     @IBOutlet weak var sumOutlet: UILabel!
-
-    
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +18,6 @@ class SecondViewController: UIViewController {
         sumOutlet.numberOfLines = 5
         sumOutlet.center = view.center
         sumOutlet.isHidden = true
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
     }
     override func viewDidAppear(_ animated: Bool) {
         //Variable to store alertTextField
@@ -62,7 +52,6 @@ class SecondViewController: UIViewController {
         }
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
-        
     }
 }
 
