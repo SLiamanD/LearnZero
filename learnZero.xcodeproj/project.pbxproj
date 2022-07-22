@@ -63,17 +63,41 @@
 		C8A25627280C3FAD005DDF47 /* learnZero */ = {
 			isa = PBXGroup;
 			children = (
+				C8CED3BA288B1E5D00BEE766 /* Application */,
+				C8CED3BC288B1E8900BEE766 /* Controlllers */,
+				C8CED3BD288B1EC100BEE766 /* Resourses */,
+			);
+			path = learnZero;
+			sourceTree = "<group>";
+		};
+		C8CED3BA288B1E5D00BEE766 /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				C8A25628280C3FAD005DDF47 /* AppDelegate.swift */,
 				C8A2562A280C3FAD005DDF47 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		C8CED3BC288B1E8900BEE766 /* Controlllers */ = {
+			isa = PBXGroup;
+			children = (
 				C8A2562C280C3FAD005DDF47 /* ViewController.swift */,
-				C8CED3B8288AA98200BEE766 /* CustomButtom.swift */,
 				C8CED3B42889BE5A00BEE766 /* SecondViewContrpoller.swift */,
+				C8CED3B8288AA98200BEE766 /* CustomButtom.swift */,
+			);
+			path = Controlllers;
+			sourceTree = "<group>";
+		};
+		C8CED3BD288B1EC100BEE766 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
 				C8A2562E280C3FAD005DDF47 /* Main.storyboard */,
 				C8A25633280C3FB0005DDF47 /* LaunchScreen.storyboard */,
 				C8A25631280C3FB0005DDF47 /* Assets.xcassets */,
 				C8A25636280C3FB0005DDF47 /* Info.plist */,
 			);
-			path = learnZero;
+			path = Resourses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,7 +324,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZXWF3WYS4X;
-				INFOPLIST_FILE = learnZero/Info.plist;
+				INFOPLIST_FILE = learnZero/Resourses/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -320,7 +344,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZXWF3WYS4X;
-				INFOPLIST_FILE = learnZero/Info.plist;
+				INFOPLIST_FILE = learnZero/Resourses/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

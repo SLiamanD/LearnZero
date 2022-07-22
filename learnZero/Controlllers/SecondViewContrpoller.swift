@@ -10,6 +10,7 @@ import UIKit
 
 class SecondViewController: UIViewController {
     @IBOutlet weak var sumOutlet: UILabel!
+
     
     
     
@@ -17,7 +18,12 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        sumOutlet.frame.size.width = 300
+        sumOutlet.frame.size.height = 400
+        sumOutlet.numberOfLines = 5
+        sumOutlet.center = view.center
         sumOutlet.isHidden = true
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,10 +56,9 @@ class SecondViewController: UIViewController {
                 var sum = nonOptSecondTextField + nonOptFirstTextField
                 if sum != 0 {
                     self.sumOutlet?.text! = String(sum)
-                } else { self.sumOutlet?.text! = "перезапустите пожадуйтса экран свайпом"
+                } else { self.sumOutlet?.text! = "перезапустите пожалуйста экран свайпом сверху вниз "
                 }
             }
-            
         }
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
