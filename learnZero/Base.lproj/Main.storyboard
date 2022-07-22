@@ -23,24 +23,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FrK-4i-KjS">
-                                <rect key="frame" x="110.5" y="311" width="154" height="45"/>
+                            <button opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FrK-4i-KjS" customClass="CustomButton" customModule="learnZero" customModuleProvider="target">
+                                <rect key="frame" x="58" y="296" width="258" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="   start game  ">
+                                <state key="normal" title="     start game    ">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="startGameButton:" destination="04c-le-psq" eventType="touchUpInside" id="zZ5-ja-SNA"/>
-                                    <segue destination="oSM-e8-XNH" kind="show" id="Wv1-lc-BHB"/>
+                                    <segue destination="oSM-e8-XNH" kind="show" id="HnV-zp-4Kl"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rmM-oZ-Jeb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="FrK-4i-KjS" firstAttribute="centerX" secondItem="8aJ-IA-4T0" secondAttribute="centerX" id="Cgj-gR-ET0"/>
-                            <constraint firstItem="FrK-4i-KjS" firstAttribute="centerY" secondItem="8aJ-IA-4T0" secondAttribute="centerY" id="QNh-eV-4xZ"/>
                             <constraint firstItem="ZaR-8h-Kpc" firstAttribute="top" secondItem="rmM-oZ-Jeb" secondAttribute="top" constant="64" id="WGL-hY-nYe"/>
                             <constraint firstItem="rmM-oZ-Jeb" firstAttribute="trailing" secondItem="ZaR-8h-Kpc" secondAttribute="trailing" constant="108" id="YXw-oX-uus"/>
                             <constraint firstItem="ZaR-8h-Kpc" firstAttribute="leading" secondItem="rmM-oZ-Jeb" secondAttribute="leading" constant="108" id="sF5-sC-1L1"/>
@@ -48,13 +47,12 @@
                     </view>
                     <connections>
                         <outlet property="hiLabel" destination="ZaR-8h-Kpc" id="oZZ-fb-8lS"/>
-                        <outlet property="startGameOutlet" destination="FrK-4i-KjS" id="49F-z4-Q1j"/>
+                        <outlet property="startGameOutlet" destination="FrK-4i-KjS" id="raP-od-fP5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OAb-55-Aai" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="04c-le-psq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-4198" y="-2427"/>
+            <point key="canvasLocation" x="-4111.1999999999998" y="-2403.1484257871066"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="qId-tB-Sul">
@@ -63,6 +61,15 @@
                     <view key="view" contentMode="scaleToFill" id="7Q1-Tf-x8y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sum" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjy-za-aAu">
+                                <rect key="frame" x="159" y="106" width="57" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="giw-na-gBy"/>
                         <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -70,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Huq-DQ-NNv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3345" y="-2427"/>
+            <point key="canvasLocation" x="-3158" y="-2403"/>
         </scene>
     </scenes>
     <resources>

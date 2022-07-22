@@ -10,8 +10,8 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
-        
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -38,31 +38,20 @@ class SecondViewController: UIViewController {
             //Copy alertTextField in local variable to use in current block of code
             secondTextField = alertTextField
         }
-        
         var tappedOnTextField = false
         let action = UIAlertAction(title: "посчитать", style: .default) { action in
             tappedOnTextField = true
-            }
+        }
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
-        }
-        
-        
-        
-        
-
-
-
-        
-        
-        
-        
     }
-        
-        
+    
+}
 
-        
-        
+
+
+
+
 
 
 

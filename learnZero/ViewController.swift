@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var hiLabel: UILabel!
     @IBOutlet weak var startGameOutlet: UIButton!
     
@@ -16,24 +16,21 @@ class ViewController: UIViewController {
     
     
     
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         hiLabel.isHidden = true
         startGameOutlet.isHidden = true
         startGameOutlet.setTitle("продолжить", for: .normal)
-        
-
-        
-        
-        
-
-        
-        
+        startGameOutlet.frame.size.width = 280
+        startGameOutlet.frame.size.height = 75
+        startGameOutlet.layer.cornerRadius = 12
+        startGameOutlet.layer.masksToBounds = true
+        startGameOutlet.backgroundColor = .cyan
+        startGameOutlet.center = view.center
     }
     override func viewWillAppear(_ animated: Bool) {
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -46,34 +43,21 @@ class ViewController: UIViewController {
             
             //Copy alertTextField in local variable to use in current block of code
             firstTextField = alertTextField
-            
-            
-            
         }
         
-        var tappedOnTextField = false
+        var tappedOnTextFieldAction = false
         let action = UIAlertAction(title: "познакомиться", style: .default) { action in
-            tappedOnTextField = true
-            self.hiLabel.text! = "Привет," + " " + firstTextField.text! + "!"
-            if tappedOnTextField == true {
+            tappedOnTextFieldAction = true
+            self.hiLabel.text! = "Привет " + firstTextField.text! + "!"
+            if tappedOnTextFieldAction == true {
                 self.hiLabel.isHidden = false
                 self.startGameOutlet.isHidden = false
             }
         }
-        
-        
-        
-        
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
-
-
-        
-        
-        
-        
     }
- 
+    
 }
 
 
