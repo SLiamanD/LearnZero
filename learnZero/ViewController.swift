@@ -11,13 +11,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var hiLabel: UILabel!
     @IBOutlet weak var startGameOutlet: UIButton!
-    
-    
-    
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         hiLabel.isHidden = true
