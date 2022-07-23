@@ -13,6 +13,7 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        sumOutlet.textColor = .black
         sumOutlet.frame.size.width = 300
         sumOutlet.frame.size.height = 400
         sumOutlet.numberOfLines = 5
@@ -25,11 +26,13 @@ class SecondViewController: UIViewController {
         var secondTextField = UITextField()
         let alert = UIAlertController(title: "введите пожалуйста числа", message: "операция сложения", preferredStyle: .alert)
         alert.addTextField { alertTextField in
+            alertTextField.keyboardType = .numberPad
             alertTextField.placeholder = "введите первое число"
             //Copy alertTextField in local variable to use in current block of code
             firstTextField = alertTextField
         }
         alert.addTextField { alertTextField in
+            alertTextField.keyboardType = .numberPad
             alertTextField.placeholder = "введите второе число"
             //Copy alertTextField in local variable to use in current block of code
             secondTextField = alertTextField
@@ -45,7 +48,7 @@ class SecondViewController: UIViewController {
                 var nonOptFirstTextField = Int(firstTextField.text!) ?? 0
                 var sum = nonOptSecondTextField + nonOptFirstTextField
                 if sum != 0 {
-                    self.sumOutlet?.text! = String(sum)
+                    self.sumOutlet?.text! = "Сумма введенных чисел: " + String(sum)
                 } else { self.sumOutlet?.text! = "перезапустите пожалуйста экран свайпом сверху вниз "
                 }
             }
