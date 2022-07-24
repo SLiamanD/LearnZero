@@ -20,7 +20,7 @@
 
 /* Begin PBXFileReference section */
 		C824698628846718001B26ED /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		C8A25625280C3FAD005DDF47 /* learnZero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = learnZero.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8A25625280C3FAD005DDF47 /* LearnZero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnZero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8A25628280C3FAD005DDF47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8A2562A280C3FAD005DDF47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C8A2562C280C3FAD005DDF47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,7 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				C8A25626280C3FAD005DDF47 /* Products */,
-				C8A25627280C3FAD005DDF47 /* learnZero */,
+				C8A25627280C3FAD005DDF47 /* LearnZero */,
 				C824698628846718001B26ED /* .gitignore */,
 			);
 			sourceTree = "<group>";
@@ -55,19 +55,19 @@
 		C8A25626280C3FAD005DDF47 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C8A25625280C3FAD005DDF47 /* learnZero.app */,
+				C8A25625280C3FAD005DDF47 /* LearnZero.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C8A25627280C3FAD005DDF47 /* learnZero */ = {
+		C8A25627280C3FAD005DDF47 /* LearnZero */ = {
 			isa = PBXGroup;
 			children = (
 				C8CED3BA288B1E5D00BEE766 /* Application */,
 				C8CED3BC288B1E8900BEE766 /* Controlllers */,
 				C8CED3BD288B1EC100BEE766 /* Resourses */,
 			);
-			path = learnZero;
+			path = LearnZero;
 			sourceTree = "<group>";
 		};
 		C8CED3BA288B1E5D00BEE766 /* Application */ = {
@@ -103,9 +103,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C8A25624280C3FAD005DDF47 /* learnZero */ = {
+		C8A25624280C3FAD005DDF47 /* LearnZero */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C8A25639280C3FB0005DDF47 /* Build configuration list for PBXNativeTarget "learnZero" */;
+			buildConfigurationList = C8A25639280C3FB0005DDF47 /* Build configuration list for PBXNativeTarget "LearnZero" */;
 			buildPhases = (
 				C8A25621280C3FAD005DDF47 /* Sources */,
 				C8A25622280C3FAD005DDF47 /* Frameworks */,
@@ -115,9 +115,9 @@
 			);
 			dependencies = (
 			);
-			name = learnZero;
+			name = LearnZero;
 			productName = learnZero;
-			productReference = C8A25625280C3FAD005DDF47 /* learnZero.app */;
+			productReference = C8A25625280C3FAD005DDF47 /* LearnZero.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -134,7 +134,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C8A25620280C3FAD005DDF47 /* Build configuration list for PBXProject "learnZero" */;
+			buildConfigurationList = C8A25620280C3FAD005DDF47 /* Build configuration list for PBXProject "LearnZero" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -147,7 +147,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C8A25624280C3FAD005DDF47 /* learnZero */,
+				C8A25624280C3FAD005DDF47 /* LearnZero */,
 			);
 		};
 /* End PBXProject section */
@@ -325,7 +325,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZXWF3WYS4X;
-				INFOPLIST_FILE = learnZero/Resourses/Info.plist;
+				INFOPLIST_FILE = LearnZero/Resourses/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -347,7 +347,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZXWF3WYS4X;
-				INFOPLIST_FILE = learnZero/Resourses/Info.plist;
+				INFOPLIST_FILE = LearnZero/Resourses/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -364,7 +364,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C8A25620280C3FAD005DDF47 /* Build configuration list for PBXProject "learnZero" */ = {
+		C8A25620280C3FAD005DDF47 /* Build configuration list for PBXProject "LearnZero" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C8A25637280C3FB0005DDF47 /* Debug */,
@@ -373,7 +373,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C8A25639280C3FB0005DDF47 /* Build configuration list for PBXNativeTarget "learnZero" */ = {
+		C8A25639280C3FB0005DDF47 /* Build configuration list for PBXNativeTarget "LearnZero" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C8A2563A280C3FB0005DDF47 /* Debug */,

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C8A25624280C3FAD005DDF47"
-               BuildableName = "learnZero.app"
-               BlueprintName = "learnZero"
-               ReferencedContainer = "container:learnZero.xcodeproj">
+               BuildableName = "LearnZero.app"
+               BlueprintName = "LearnZero"
+               ReferencedContainer = "container:LearnZero.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C8A25624280C3FAD005DDF47"
-            BuildableName = "learnZero.app"
-            BlueprintName = "learnZero"
-            ReferencedContainer = "container:learnZero.xcodeproj">
+            BuildableName = "LearnZero.app"
+            BlueprintName = "LearnZero"
+            ReferencedContainer = "container:LearnZero.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C8A25624280C3FAD005DDF47"
-            BuildableName = "learnZero.app"
-            BlueprintName = "learnZero"
-            ReferencedContainer = "container:learnZero.xcodeproj">
+            BuildableName = "LearnZero.app"
+            BlueprintName = "LearnZero"
+            ReferencedContainer = "container:LearnZero.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
