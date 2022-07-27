@@ -35,7 +35,7 @@ class ViewController: UIViewController {
                            multiplier: 1,
                            constant: 0).isActive = true
         NSLayoutConstraint(item: view1,
-                           attribute: .trailingMargin,
+                           attribute: .trailing,
                            relatedBy: .equal,
                            toItem: view,
                            attribute: .trailingMargin,
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
                            toItem: view,
                            attribute: .topMargin,
                            multiplier: 1,
-                           constant: 80).isActive = true
+                           constant: 88).isActive = true
         NSLayoutConstraint(item: view1,
                            attribute: .height,
                            relatedBy: .equal,
