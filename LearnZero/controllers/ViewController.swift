@@ -19,31 +19,29 @@ class ViewController: UIViewController {
     var viewBlue: UIView =  {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor.red
+        view.backgroundColor = UIColor.blue
         return view
     }()
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(viewRed)
         view.addSubview(viewBlue)
-        
-        let viewVFL = ["viewRed":viewRed,"viewBlue":viewBlue]
-        let metrics = ["height":100, "width": view.bounds.size.width / 3, "top": view.bounds.size.height / 2 ]
-        
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-top-[viewRed(height)]|",
-                                                          options: [],
-                                                          metrics: metrics,
-                                                          views: viewVFL))
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-top-[viewBlue(height)]|",
-                                                          options: [],
-                                                          metrics: metrics,
-                                                          views: viewVFL))
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[viewRed(width)]-(50)-[viewBlue(width)]-|",
-                                                          options: [],
-                                                          metrics: metrics,
-                                                          views: viewVFL))
+        createViewRedConstant()
+        createViewBlueConstant()
+    }
+    
+    func createViewRedConstant(){
+        viewRed.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
+        viewRed.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1/3).isActive = true
+        viewRed.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        viewRed.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+    }
+    func createViewBlueConstant(){
+        viewBlue.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
+        viewBlue.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1/3).isActive = true
+        viewBlue.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        viewBlue.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
 }
+
