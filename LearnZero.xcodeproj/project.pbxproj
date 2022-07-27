@@ -101,14 +101,9 @@
 		C8FCB45B28912E4A00AE018F /* LearnZero */ = {
 			isa = PBXGroup;
 			children = (
-				C8FCB45C28912E4A00AE018F /* AppDelegate.swift */,
-				C8FCB45E28912E4A00AE018F /* SceneDelegate.swift */,
-				C8FCB46028912E4A00AE018F /* ViewController.swift */,
-				C8FCB46228912E4A00AE018F /* Main.storyboard */,
-				C8FCB46828912E4A00AE018F /* Assets.xcassets */,
-				C8FCB46A28912E4A00AE018F /* LaunchScreen.storyboard */,
-				C8FCB46D28912E4A00AE018F /* Info.plist */,
-				C8FCB46528912E4A00AE018F /* LearnZero.xcdatamodeld */,
+				C8FCB49028915C0D00AE018F /* applications */,
+				C8FCB48F28915BF000AE018F /* controllers */,
+				C8FCB49128915C2B00AE018F /* resourses */,
 			);
 			path = LearnZero;
 			sourceTree = "<group>";
@@ -129,6 +124,35 @@
 				C8FCB48328912E4A00AE018F /* Info.plist */,
 			);
 			path = LearnZeroUITests;
+			sourceTree = "<group>";
+		};
+		C8FCB48F28915BF000AE018F /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C8FCB46028912E4A00AE018F /* ViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		C8FCB49028915C0D00AE018F /* applications */ = {
+			isa = PBXGroup;
+			children = (
+				C8FCB45C28912E4A00AE018F /* AppDelegate.swift */,
+				C8FCB45E28912E4A00AE018F /* SceneDelegate.swift */,
+			);
+			path = applications;
+			sourceTree = "<group>";
+		};
+		C8FCB49128915C2B00AE018F /* resourses */ = {
+			isa = PBXGroup;
+			children = (
+				C8FCB46828912E4A00AE018F /* Assets.xcassets */,
+				C8FCB46228912E4A00AE018F /* Main.storyboard */,
+				C8FCB46A28912E4A00AE018F /* LaunchScreen.storyboard */,
+				C8FCB46D28912E4A00AE018F /* Info.plist */,
+				C8FCB46528912E4A00AE018F /* LearnZero.xcdatamodeld */,
+			);
+			path = resourses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,7 +466,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZXWF3WYS4X;
-				INFOPLIST_FILE = LearnZero/Info.plist;
+				INFOPLIST_FILE = LearnZero/resourses/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -462,7 +486,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZXWF3WYS4X;
-				INFOPLIST_FILE = LearnZero/Info.plist;
+				INFOPLIST_FILE = LearnZero/resourses/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
