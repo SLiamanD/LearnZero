@@ -95,6 +95,5 @@ class ViewController: UIViewController {
                            attribute: .notAnAttribute,
                            multiplier: 1,
                            constant: 100).isActive = true
-        
     }
 }
