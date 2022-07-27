@@ -28,40 +28,40 @@ class ViewController: UIViewController {
     
     func createView1Constant() {
         NSLayoutConstraint(item: view1,
-                           attribute: .leading,
+                           attribute: .centerX,
                            relatedBy: .equal,
                            toItem: view,
-                           attribute: .leadingMargin,
+                           attribute: .centerX,
                            multiplier: 1,
                            constant: 0).isActive = true
         NSLayoutConstraint(item: view1,
-                           attribute: .trailing,
+                           attribute: .centerY,
                            relatedBy: .equal,
                            toItem: view,
-                           attribute: .trailingMargin,
+                           attribute: .centerY,
                            multiplier: 1,
                            constant: 0).isActive = true
         NSLayoutConstraint(item: view1,
-                           attribute: .leading,
+                           attribute: .width,
                            relatedBy: .equal,
-                           toItem: view,
-                           attribute: .leadingMargin,
+                           toItem: nil,
+                           attribute: .notAnAttribute,
                            multiplier: 1,
-                           constant: 0).isActive = true
-        NSLayoutConstraint(item: view1,
-                           attribute: .top,
-                           relatedBy: .equal,
-                           toItem: view,
-                           attribute: .topMargin,
-                           multiplier: 1,
-                           constant: 88).isActive = true
+                           constant: 200).isActive = true
         NSLayoutConstraint(item: view1,
                            attribute: .height,
                            relatedBy: .equal,
-                           toItem: view,
-                           attribute: .width,
+                           toItem: nil,
+                           attribute: .notAnAttribute,
                            multiplier: 1,
-                           constant: 0).isActive = true
+                           constant: 200).isActive = true
+//        NSLayoutConstraint(item: view1,
+//                           attribute: .height,
+//                           relatedBy: .equal,
+//                           toItem: view,
+//                           attribute: .width,
+//                           multiplier: 1,
+//                           constant: 0).isActive = true
         
     }
     
