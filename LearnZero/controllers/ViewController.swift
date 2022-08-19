@@ -1,71 +1,35 @@
-//
-//  ViewController.swift
-//  LearnZero
-//
-//  Created by sliamand on 27.07.2022.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
     
-    var viewRed: UIView =  {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor.red
-        return view
-    }()
     
-    var viewBlue: UIView =  {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor.blue
-        return view
-    }()
-    
-    var viewGreen: UIView =  {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor.green
-        return view
-    }()
+    // MARK: - declaration
+    var view1:UIView!
+    var view2:UIView!
+    var imageView:UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(viewRed)
-        view.addSubview(viewBlue)
-        view.addSubview(viewGreen)
-        createViewRedConstant()
-        createViewBlueConstant()
-        createviewGreenConstant()
+
     }
     
-    func createViewRedConstant(){
-        viewRed.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
-        viewRed.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1/3).isActive = true
-        viewRed.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        viewRed.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-    }
-    func createViewBlueConstant(){
-        viewBlue.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
-        viewBlue.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1/3).isActive = true
-        viewBlue.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        viewBlue.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-    }
-    func createviewGreenConstant() {
-        viewGreen.rightAnchor.constraint(equalTo: viewBlue.rightAnchor).isActive = true
-        viewGreen.leftAnchor.constraint(equalTo: viewRed.leftAnchor).isActive = true
-        viewGreen.bottomAnchor.constraint(equalTo: viewRed.topAnchor, constant: -20).isActive = true
-        viewGreen.heightAnchor.constraint(equalToConstant: 100).isActive = true
+    func initViews(){
+        // MARK: - inicialization
+        self.view1 = UIView()
+        self.view2 = UIView()
         
+        //  prepare auto layout
+        view1.translatesAutoresizingMaskIntoConstraints = false
+        view2.translatesAutoresizingMaskIntoConstraints = false
+        
+        // set background color
+        view1.backgroundColor = UIColor.lightGray
+        view2.backgroundColor = UIColor.darkGray
+        
+        //  add to super view
+        self.view.addSubview(view1)
+        self.view.addSubview(view2)
         
     }
-
+    
 }
-//
-//func createviewGreenConstant(){
-//    viewGreen.rightAnchor.constraint(equalTo: viewBlue.rightAnchor).isActive = true
-//    viewGreen.leftAnchor.constraint(equalTo: viewRed.leftAnchor).isActive = true
-//    viewGreen.bottomAnchor.constraint(equalTo: viewBlue.topAnchor, constant: -20).isActive = true
-//    viewGreen.heightAnchor.constraint(equalToConstant: 100).isActive = true
-//}
