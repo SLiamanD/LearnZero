@@ -49,8 +49,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     
     private func requestQuote(for symbol: String) {
-        let url = URL(string: "https:api.iextrading.com/1.0/stock/\(symbol)/quote")!
-        
+        let url = URL(string: "https://cloud.iexapis.com/stable/stock/\(symbol)/quote?token=pk_aebcb09cb11e4309ad7cb286f55f57ac")!
+//    https://cloud.iexapis.com/stable/stock/\(symbol)/quote?token=YOUR_TOKEN_HERE
+
         let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
             guard
                 error == nil,
@@ -75,6 +76,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             guard
                 let json = jsonObject as? [String:Any],
                 let companyName = json["companyName"] as? String
+//
             else {
                 print (" ! invalid JSON format")
                 return
