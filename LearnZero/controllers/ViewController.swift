@@ -18,6 +18,12 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     //MARK: UIPickerViewDelegate
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        self.activityIndicator.startAnimating()
+        
+        let selectedSymbol = Array(self.companies.values)[row]
+        self.requestQuote(for: selectedSymbol)
+        
+        
         return Array(self.companies.keys)[row]
     }
     
@@ -29,11 +35,68 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        activityIndicator.isHidden = true
         self.companyNameLabel.text = "Tinkoff"
         self.companyPickerView.dataSource = self
         self.companyPickerView.delegate = self
+        self.activityIndicator.hidesWhenStopped = true
+        activityIndicator.isHidden = false
+        self.activityIndicator.startAnimating()
+        self.requestQuote(for: "APPL")
+        self.requestQuoteUpdate()
     }
-
     
+    //MARK: pravate methods
+    
+    
+    private func requestQuote(for symbol: String) {
+        let url = URL(string: "https:api.iextrading.com/1.0/stock/\(symbol)/quote")!
+        
+        let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
+            guard
+                error == nil,
+                (response as? HTTPURLResponse)?.statusCode == 200,
+                let data = data
+            else {
+            print("! Network error")
+            return
+        }
+//            self.parseQuote.(data:data)
+        }
+    
+        dataTask.resume()
+        
+    }
+    
+    
+    
+    private func parceQuote(data:Data) {
+        do {
+            let jsonObject = try JSONSerialization.jsonObject(with: data)
+            guard
+                let json = jsonObject as? [String:Any],
+                let companyName = json["companyName"] as? String
+            else {
+                print (" ! invalid JSON format")
+                return
+            }
+            print("Company name is '\(companyName)' ")
+        } catch {
+            print ("! Json parsing error:" + error.localizedDescription)
+        }
+    
+    }
+    
+    private func requestQuoteUpdate() {
+        self.activityIndicator.startAnimating()
+        
+        let selectedRow = self.companyPickerView.selectedRow(inComponent: 0)
+        let selectedSymbol = Array(self.companies.values)[selectedRow]
+        self.requestQuote(for: selectedSymbol)
+    }
+    
+    
+    private func displayStockInfo(companyName: String) {
+        self.activityIndicator.stopAnimating()
+        self.companyNameLabel.text = companyName
+    }
 }
