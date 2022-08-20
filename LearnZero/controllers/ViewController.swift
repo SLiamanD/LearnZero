@@ -61,11 +61,13 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             print("! Network error")
             return
         }
-//            self.parseQuote.(data:data)
+            self.parceQuote(data:data)
+            print(String(data:data, encoding: .utf8))
+            
         }
-    
-        dataTask.resume()
         
+        dataTask.resume()
+    
     }
     
     
@@ -76,12 +78,15 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             guard
                 let json = jsonObject as? [String:Any],
                 let companyName = json["companyName"] as? String
-//
+
+
             else {
                 print (" ! invalid JSON format")
                 return
             }
-            print("Company name is '\(companyName)' ")
+            print( "Company name is '\(companyName)' ")
+
+           
         } catch {
             print ("! Json parsing error:" + error.localizedDescription)
         }
@@ -97,8 +102,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     
     
+    
     private func displayStockInfo(companyName: String) {
         self.activityIndicator.stopAnimating()
         self.companyNameLabel.text = companyName
     }
+    
 }
