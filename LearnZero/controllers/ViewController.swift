@@ -19,9 +19,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     //MARK: UIPickerViewDelegate
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         self.activityIndicator.startAnimating()
-        
         let selectedSymbol = Array(self.companies.values)[row]
         self.requestQuote(for: selectedSymbol)
+        displayStockInfo(companyName: selectedSymbol)
         
         
         return Array(self.companies.keys)[row]
@@ -50,7 +50,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     private func requestQuote(for symbol: String) {
         let url = URL(string: "https://cloud.iexapis.com/stable/stock/\(symbol)/quote?token=pk_aebcb09cb11e4309ad7cb286f55f57ac")!
-//    https://cloud.iexapis.com/stable/stock/\(symbol)/quote?token=YOUR_TOKEN_HERE
 
         let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
             guard
@@ -62,7 +61,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             return
         }
             self.parceQuote(data:data)
-            print(String(data:data, encoding: .utf8))
+            
+            // так можно распечатать весь json целиком - print(String(data:data, encoding: .utf8))
             
         }
         
@@ -85,12 +85,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
                 return
             }
             print( "Company name is '\(companyName)' ")
-
-           
         } catch {
             print ("! Json parsing error:" + error.localizedDescription)
         }
-    
+        
     }
     
     private func requestQuoteUpdate() {
@@ -101,11 +99,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         self.requestQuote(for: selectedSymbol)
     }
     
-    
-    
+
     private func displayStockInfo(companyName: String) {
         self.activityIndicator.stopAnimating()
         self.companyNameLabel.text = companyName
     }
-    
 }
