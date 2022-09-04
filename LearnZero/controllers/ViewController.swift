@@ -18,7 +18,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
+        let selectedRow = self.companyPickerView.selectedRow(inComponent: 0)
+        let selectedSymbol = Array(self.companies.values)[selectedRow]
+        displayStockInfo(companyName: selectedSymbol)
       }
     
     //MARK: UIPickerViewDelegate
@@ -32,7 +34,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     private let companies: [String:String] = ["Apple":"AAPL", "Microsoft":"MSFT", "Google":"GOOG", "Amazon":"AMZN", "Facebook":"FB"]
     
     //MARK: view lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let selectedRow = self.companyPickerView.selectedRow(inComponent: 0)
