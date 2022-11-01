@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C891B46D28CA0A420038A89D /* ImeiListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C891B46C28CA0A420038A89D /* ImeiListController.swift */; };
 		C8A442B628C49A6A00E1E80B /* MobileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A442B528C49A6A00E1E80B /* MobileStorage.swift */; };
 		C8FCB45D28912E4A00AE018F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FCB45C28912E4A00AE018F /* AppDelegate.swift */; };
 		C8FCB45F28912E4A00AE018F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FCB45E28912E4A00AE018F /* SceneDelegate.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C891B46C28CA0A420038A89D /* ImeiListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImeiListController.swift; sourceTree = "<group>"; };
 		C8A442B528C49A6A00E1E80B /* MobileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileStorage.swift; sourceTree = "<group>"; };
 		C8FCB45928912E4A00AE018F /* LearnZero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnZero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8FCB45C28912E4A00AE018F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -131,8 +133,9 @@
 		C8FCB48F28915BF000AE018F /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C8FCB46028912E4A00AE018F /* ViewController.swift */,
 				C8A442B528C49A6A00E1E80B /* MobileStorage.swift */,
+				C8FCB46028912E4A00AE018F /* ViewController.swift */,
+				C891B46C28CA0A420038A89D /* ImeiListController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8FCB46728912E4A00AE018F /* LearnZero.xcdatamodeld in Sources */,
+				C891B46D28CA0A420038A89D /* ImeiListController.swift in Sources */,
 				C8FCB46128912E4A00AE018F /* ViewController.swift in Sources */,
 				C8FCB45D28912E4A00AE018F /* AppDelegate.swift in Sources */,
 				C8FCB45F28912E4A00AE018F /* SceneDelegate.swift in Sources */,
