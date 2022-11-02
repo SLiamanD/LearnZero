@@ -12,6 +12,10 @@ import UIKit
  1.3 Выведите результат при помощи `print()`
  */
  
+var firstNumber:Float = 3.14
+var secondNumber:Float = 42.0
+let sumOfNumbers = Double(firstNumber + secondNumber)
+print(sumOfNumbers)
 /*:
  ### Задание 2
  2.1 Создайте переменную `numberOne` и присвойте ей любое целочисленное значение
@@ -27,7 +31,11 @@ import UIKit
  2.6 Выведите на консоль фразу: «Результат деления <...> на <...> равен <...> <...>/<...>». Поясню: в математике результатом деления 5 на 3 будет натуральная дробь 1 2/3 (одна целая две третьих, здесь мы используем стандартную математическую запись, а не оператор деления). Вам необходимо вывести на консоль именно такой результат от деления `numberOne` на `numberTwo` в виде натуральной дроби — например «Результат деления 7 на 3 равен 2 1/3».
  
  */
-
+var numberOne = 3
+var numberTwo = 2
+let result = numberOne / numberTwo
+let remainder = numberOne % numberTwo
+print(remainder)
 
 /*:
  ### Задание 3
