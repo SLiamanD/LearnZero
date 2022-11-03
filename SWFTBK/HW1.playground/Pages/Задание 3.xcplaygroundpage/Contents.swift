@@ -11,5 +11,4 @@ import Foundation
  
  */
 
-
 //: [Ранее: Задание 2](@previous) | Задание 3 из 3
