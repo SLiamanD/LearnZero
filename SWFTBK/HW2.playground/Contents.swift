@@ -85,20 +85,6 @@ print ("я родился в \(quarter) квартале")
 
 
 
-
-
-//if (monthOfBirth != 0) in 1 ..< 3 {
-//    quarterOfBithday = "первый квартал"
-//} else if (monthOfBirth != 0) in 4 ..< 6 {
-//    quarterOfBithday = "второй квартал"
-//} } else if monthOfBirth in 6 ..< 8 {
-//    quarterOfBithday = "второй квартал"
-//} else
-
-
-
-
-
 /*:
  ### Задание 4. Депозитный калькулятор
 
@@ -111,3 +97,15 @@ print ("я родился в \(quarter) квартале")
  Пример вывода "Выплата по депозиту суммой <значение> (ставка <значение>%) через <значение> лет будет <значение>%"
  
  */
+
+func depositCalc(sumOfRubles:Double, years:Double, annualRate:Double) -> Double {
+    let percentOfInvestment = sumOfRubles + ((sumOfRubles / 100 ) * (years * annualRate))
+    print("Выплата по депозиту суммой \(sumOfRubles) (ставка \(annualRate)%) через \(Int(years)) лет будет \(years * annualRate)% что представляет собой \(percentOfInvestment) в рублевом эквиваленте")
+    return percentOfInvestment
+}
+
+
+depositCalc(sumOfRubles: 100, years: 2, annualRate: 5)
+
+
+
