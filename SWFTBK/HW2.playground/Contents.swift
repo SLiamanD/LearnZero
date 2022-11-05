@@ -55,6 +55,50 @@ let dayOfBirth = 20
 let monthOfBirth = 8
 let yearOfBirth = 1992
 
+let secondsInMinute = 60
+let minutesInHour = 60
+let hoursInDay = 24
+let minutesInDay = 1440
+let secondsInDay = 86400
+let secondsInHour = 3600
+let daysInMonth = 30
+let daysInYear = 365
+
+var today = 5
+var thisMonth = 11
+var thisYear = 2022
+
+var howManyYearsILive = thisYear - yearOfBirth
+var howManyMonthILive = (howManyYearsILive * 12) + (thisMonth - monthOfBirth)
+var howManyWeeksILive = howManyMonthILive * 4
+var howManyDaysILive = howManyMonthILive * 30
+var howManyHoursILive = howManyDaysILive * 24
+var howManyMinutesILive = howManyHoursILive * 60
+var howManySecondsILive = howManyMinutesILive * 60
+print("если я родился \(dayOfBirth).0\(monthOfBirth).\(yearOfBirth) года, а текущая дата \(today).\(thisMonth).\(thisYear), то результат будет следующим: \(howManyYearsILive) лет, \(howManyMonthILive) месяцев , \(howManyDaysILive) дней и \(howManySecondsILive) секунд прошло со дня моего рождения примерно")
+
+var quarter: Int {
+       monthOfBirth / 3 + 1
+   }
+print ("я родился в \(quarter) квартале")
+
+
+
+
+
+
+//if (monthOfBirth != 0) in 1 ..< 3 {
+//    quarterOfBithday = "первый квартал"
+//} else if (monthOfBirth != 0) in 4 ..< 6 {
+//    quarterOfBithday = "второй квартал"
+//} } else if monthOfBirth in 6 ..< 8 {
+//    quarterOfBithday = "второй квартал"
+//} else
+
+
+
+
+
 /*:
  ### Задание 4. Депозитный калькулятор
 
