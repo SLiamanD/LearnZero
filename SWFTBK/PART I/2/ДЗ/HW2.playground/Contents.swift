@@ -95,3 +95,12 @@ print("Если я родился \(dayOfBirth).0\(monthOfBirth).\(yearOfBirth) 
  Пример вывода "Выплата по депозиту суммой <значение> (ставка <значение>%) через <значение> лет будет <значение>%"
  
  */
+func depositeCalculator(depositeMoney:Double, depositRate:Double, years:Double) -> Double {
+    let depositInterest:Double = depositeMoney + ((depositeMoney/100) * (years * depositRate))
+    let sumOfpercent = years * depositRate
+    print("Выплата по депозиту суммой \(depositeMoney) (ставка \(depositRate)%) через \(years) года/лет будет \(sumOfpercent)% что примерно равно \(depositInterest) в рублевом эквиваленте")
+    return depositInterest
+}
+
+
+depositeCalculator(depositeMoney: 100, depositRate: 10, years: 2)
