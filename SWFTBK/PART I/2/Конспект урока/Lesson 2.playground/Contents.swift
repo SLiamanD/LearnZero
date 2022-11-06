@@ -1,6 +1,7 @@
 //: ## Базовые операторы
 
 import UIKit
+import Foundation
 
 //: ### Арифметические операторы:
 var number1 = 9
