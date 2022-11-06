@@ -41,7 +41,7 @@ print("\n====КОНСТРУКЦИЯ else if====")
 
 someNumber = 3
 
-if someNumber < 4 { // False
+if someNumber < 4 { // True
     print("The first condition is true")
 } else if someNumber < 8 { // False
     print("The second condition is true")
@@ -110,19 +110,20 @@ print("\n====ТЕРНАРНЫЙ ОПЕРАТОР====")
 
 // condition ? some code : some code
 
-//let age = 39
-////
-//let permissionMessage: String
-//if age < 65 {
-//    permissionMessage = "Разрешено"
-//}
+let age = 39
 //
-//print(permissionMessage)
-//
-//let permissionMessage = age < 65 ? "Разрешено" : "Запрещено"
-//
-//
-//print("Человеку выходить: \(permissionMessage)")
+var permissionMessage: String = "no access"
+
+if age < 65 {
+    permissionMessage = "Разрешено"
+}
+
+print(permissionMessage)
+
+ permissionMessage = age < 65 ? "Разрешено" : "Запрещено"
+
+
+print("Человеку выходить: \(permissionMessage)")
 
 
 
@@ -140,10 +141,10 @@ print("\n====ТЕРНАРНЫЙ ОПЕРАТОР====")
     }
 */
 
-print("====SWITCH STATEMENT====")
+print("\n ====SWITCH STATEMENT====")
 
 // up, down
-let command = "UP"
+let command = "up"
 
 if command == "up" {
     print("Идти вверх")
@@ -172,3 +173,11 @@ print("====СООТВЕТСТВИЕ ДИАПАЗОНУ в Switch====")
 
 
 //: [Далее: Перечисления (енамы)](@next)
+
+
+
+
+
+
+
+

@@ -86,3 +86,31 @@ case .driverLicense(let number, let expirationDate):
 case .noId:
     print("Нет данных")
 }
+
+
+enum Planet: Int {
+    case mercury = 1, venus, earth, mars, jupiter, saturn,
+uranus, neptune
+}
+var somePlanet = Planet.earth
+print("Earth is the \(somePlanet.rawValue) planet from the sun")
+
+
+let possiblePlanet = Planet(rawValue: 7)
+print("The seventh planet is \(possiblePlanet!)")
+
+enum Wekday {
+    case workday(String, Int)
+    case weekend(String)
+}
+
+var weekday = Wekday.workday("its a work day", 4)
+
+switch weekday {
+    case .workday(let message, let time):
+        print("\(message), \(time)")
+    case .weekend(let weekendMessage):
+        print("\(weekendMessage)")
+}
+
+
