@@ -15,6 +15,7 @@ let firstString:String
 let secondString:String
 firstString = "I can"
 secondString = "code"
-print(firstString + " " + secondString)
+let greeting = (firstString + " " + "\(secondString)" + " !")
+print(greeting)
 
 //: Задание 1 из 3  |  [Далее: Задание 2](@next)

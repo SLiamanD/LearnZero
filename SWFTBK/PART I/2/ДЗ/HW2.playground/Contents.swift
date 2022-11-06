@@ -11,7 +11,12 @@ import UIKit
  
  1.3 Выведите результат при помощи `print()`
  */
- 
+var a:Float = 3.14
+var b:Float = 4.20
+var c:Double = Double(a+b)
+print(c)
+
+
 /*:
  ### Задание 2
  2.1 Создайте переменную `numberOne` и присвойте ей любое целочисленное значение
@@ -27,6 +32,20 @@ import UIKit
  2.6 Выведите на консоль фразу: «Результат деления <...> на <...> равен <...> <...>/<...>». Поясню: в математике результатом деления 5 на 3 будет натуральная дробь 1 2/3 (одна целая две третьих, здесь мы используем стандартную математическую запись, а не оператор деления). Вам необходимо вывести на консоль именно такой результат от деления `numberOne` на `numberTwo` в виде натуральной дроби — например «Результат деления 7 на 3 равен 2 1/3».
  
  */
+var numberOne = 2
+var numberTwo = 1
+let result = numberOne / numberTwo
+let remainder = numberOne % numberTwo
+print("При делении \(numberOne) на \(numberTwo) результат равен \(result), остаток равен \(remainder)")
+numberOne = 8
+numberTwo = 3
+let newResult = numberOne / numberTwo
+let newRemainder = numberOne % numberTwo
+
+print("Результат деления \(numberOne) на \(numberTwo) равен \(newResult) \(newRemainder)/\(numberTwo)")
+
+
+
 
 
 /*:
@@ -43,6 +62,31 @@ import UIKit
  
  3.6 Выведите на консоль сообщение о том в каком квартале вы родились. Для этого используейте операторы сравнения, что бы сравнить номер месяца вашего рождения с одним из четрырех кварталов. Например если номер месяца больше 0 и меньше или равно 3, то это будет первый квартал. Для получения результата используйте конструкцию if
  */
+let dayOfBirth = 01
+let monthOfBirth = 01
+let yearOfBirth = 2000
+let secondsInMunute = 60
+let minutesInHours = 60
+let hoursInDay = 24
+let daysInMonth = 30
+let monthInYear = 12
+let toDay = 6
+let thisMonth = 11
+let thisYear = 2022
+let yearsFromMyBithDay = thisYear - yearOfBirth
+let monthFromMyBithday = (yearsFromMyBithDay * 12) + (thisMonth - monthOfBirth)
+let daysFromMyBithDay = (monthFromMyBithday * 30) + (toDay - dayOfBirth)
+let weeksFromMyBithDay = daysFromMyBithDay / 7
+let hoursFromMyBithday = daysFromMyBithDay * 24
+let minutesFromMyBithDay = hoursFromMyBithday * 60
+let secondFromMyBithDay = minutesFromMyBithDay * 60
+
+var quarter: Int {
+       monthOfBirth / 3 + 1
+   }
+
+print("Если я родился \(dayOfBirth).0\(monthOfBirth).\(yearOfBirth) года, а текущая дата 0\(toDay).\(thisMonth).\(thisYear), то результат будет следующим: \(yearsFromMyBithDay) годков(годика), в месяцах это  \(monthFromMyBithday) месяцев(ца), в днях - \(daysFromMyBithDay) деньков(дня) и если секунд, то \(secondFromMyBithDay) секундочек(ды) прошло с моей днюшки. Если в недельках - это будет \(weeksFromMyBithDay) неделек(ля). Родился я получается в \(quarter) квартале")
+
 
 /*:
  ### Задание 4. Депозитный калькулятор
@@ -56,3 +100,12 @@ import UIKit
  Пример вывода "Выплата по депозиту суммой <значение> (ставка <значение>%) через <значение> лет будет <значение>%"
  
  */
+func depositeCalculator(depositeMoney:Double, depositRate:Double, years:Double) -> Double {
+    let depositInterest:Double = depositeMoney + ((depositeMoney/100) * (years * depositRate))
+    let sumOfpercent = years * depositRate
+    print("Выплата по депозиту суммой \(depositeMoney) (ставка \(depositRate)%) через \(years) года/лет будет \(sumOfpercent)% что примерно равно \(depositInterest) в рублевом эквиваленте")
+    return depositInterest
+}
+
+
+depositeCalculator(depositeMoney: 100, depositRate: 10, years: 2)
