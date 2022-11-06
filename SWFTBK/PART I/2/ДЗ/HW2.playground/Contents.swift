@@ -64,6 +64,24 @@ print("Результат деления \(numberOne) на \(numberTwo) раве
  */
 let dayOfBirth = 20
 let monthOfBirth = 08
+let yearOfBirth = 1992
+let secondsInMunute = 60
+let minutesInHours = 60
+let hoursInDay = 24
+let daysInMonth = 30
+let monthInYear = 12
+var toDay = 6
+var thisMonth = 11
+var thisYear = 2022
+var yearsFromMyBithDay = thisYear - yearOfBirth
+var monthFromMyBithday = (yearsFromMyBithDay * 12) + (thisMonth - monthOfBirth)
+var daysFromMyBithDay = (monthFromMyBithday * 30) + (toDay - dayOfBirth)
+var weeksFromMyBithDay = daysFromMyBithDay / 7
+var hoursFromMyBithday = daysFromMyBithDay * 24
+var minutesFromMyBithDay = hoursFromMyBithday * 60
+var secondFromMyBithDay = minutesFromMyBithDay * 60
+
+print("Если я родился \(dayOfBirth).0\(monthOfBirth).\(yearOfBirth) года, а текущая дата 0\(toDay).\(thisMonth).\(thisYear), то результат будет следующим: \(yearsFromMyBithDay) годков, \(monthFromMyBithday) месяцев, \(daysFromMyBithDay) деньков и \(secondFromMyBithDay) секундочек прошло с моей днюшки. Если в недельках - это будет \(weeksFromMyBithDay) недель.")
 
 /*:
  ### Задание 4. Депозитный калькулятор
