@@ -42,7 +42,7 @@ numberTwo = 3
 let newResult = numberOne / numberTwo
 let newRemainder = numberOne % numberTwo
 
-print("Результат деления \(numberOne) на \(numberTwo) равен \(newResult) \(newRemainder)/3")
+print("Результат деления \(numberOne) на \(numberTwo) равен \(newResult) \(newRemainder)/\(numberTwo)")
 
 
 
@@ -62,26 +62,31 @@ print("Результат деления \(numberOne) на \(numberTwo) раве
  
  3.6 Выведите на консоль сообщение о том в каком квартале вы родились. Для этого используейте операторы сравнения, что бы сравнить номер месяца вашего рождения с одним из четрырех кварталов. Например если номер месяца больше 0 и меньше или равно 3, то это будет первый квартал. Для получения результата используйте конструкцию if
  */
-let dayOfBirth = 20
-let monthOfBirth = 08
-let yearOfBirth = 1992
+let dayOfBirth = 01
+let monthOfBirth = 01
+let yearOfBirth = 2000
 let secondsInMunute = 60
 let minutesInHours = 60
 let hoursInDay = 24
 let daysInMonth = 30
 let monthInYear = 12
-var toDay = 6
-var thisMonth = 11
-var thisYear = 2022
-var yearsFromMyBithDay = thisYear - yearOfBirth
-var monthFromMyBithday = (yearsFromMyBithDay * 12) + (thisMonth - monthOfBirth)
-var daysFromMyBithDay = (monthFromMyBithday * 30) + (toDay - dayOfBirth)
-var weeksFromMyBithDay = daysFromMyBithDay / 7
-var hoursFromMyBithday = daysFromMyBithDay * 24
-var minutesFromMyBithDay = hoursFromMyBithday * 60
-var secondFromMyBithDay = minutesFromMyBithDay * 60
+let toDay = 6
+let thisMonth = 11
+let thisYear = 2022
+let yearsFromMyBithDay = thisYear - yearOfBirth
+let monthFromMyBithday = (yearsFromMyBithDay * 12) + (thisMonth - monthOfBirth)
+let daysFromMyBithDay = (monthFromMyBithday * 30) + (toDay - dayOfBirth)
+let weeksFromMyBithDay = daysFromMyBithDay / 7
+let hoursFromMyBithday = daysFromMyBithDay * 24
+let minutesFromMyBithDay = hoursFromMyBithday * 60
+let secondFromMyBithDay = minutesFromMyBithDay * 60
 
-print("Если я родился \(dayOfBirth).0\(monthOfBirth).\(yearOfBirth) года, а текущая дата 0\(toDay).\(thisMonth).\(thisYear), то результат будет следующим: \(yearsFromMyBithDay) годков, \(monthFromMyBithday) месяцев, \(daysFromMyBithDay) деньков и \(secondFromMyBithDay) секундочек прошло с моей днюшки. Если в недельках - это будет \(weeksFromMyBithDay) недель.")
+var quarter: Int {
+       monthOfBirth / 3 + 1
+   }
+
+print("Если я родился \(dayOfBirth).0\(monthOfBirth).\(yearOfBirth) года, а текущая дата 0\(toDay).\(thisMonth).\(thisYear), то результат будет следующим: \(yearsFromMyBithDay) годков(годика), в месяцах это  \(monthFromMyBithday) месяцев(ца), в днях - \(daysFromMyBithDay) деньков(дня) и если секунд, то \(secondFromMyBithDay) секундочек(ды) прошло с моей днюшки. Если в недельках - это будет \(weeksFromMyBithDay) неделек(ля). Родился я получается в \(quarter) квартале")
+
 
 /*:
  ### Задание 4. Депозитный калькулятор
