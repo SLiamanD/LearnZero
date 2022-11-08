@@ -11,13 +11,17 @@ import Foundation
  Объявите переменную `userInputAge` типа `String` и присвойте ей значение "34e" для моделирования опечатки.  Затем определите константу `userAge` типа `Int` и используйте конструктор `Int` для преобразования `userInputAge`.  Какую ошибку вы получаете?
  */
 
+var userInputAge:String = "34ee"
+let userAge:Int? = Int(userInputAge)
+
+
 
 
 /*:
  Теперь поменяйте тип `userAge` на `Int?`, и напечатайте значение `userAge`.  Почему значение `userAge` равно `nil`?  Ответьте в комментарии или внутри команды print.
  */
 
-
+print("userAge = \(userAge) ( результат nil получается если не удалось преобразовать значение из userInputAge(String) в опциональный String)")
 
 /*:
  Теперь исправьте опечатку в значении `userInputAge`.  Что-нибудь в результатах вывода кажется вам неуместным?
@@ -27,10 +31,15 @@ import Foundation
 
 
 
+userInputAge = "55"
+
 /*:
  Используйте привязку опционалов для извлечения `userAge`.  Если `userAge` содержит значение, выведите его в консоль.
  */
 
+if let nonOptionalUserAge = userAge {
+    print("userAge = \(nonOptionalUserAge) (тут мы воспользовались безопасной т н опциональной привязкой)")
+}
 
 
 /*:
@@ -38,5 +47,8 @@ import Foundation
  */
 
 
+//userInputAge = "tt56"
+
+//print(userAge!)
 
 //: [Ранее: Задание 1](@previous)  |  задание 2 из 6  |  [Далее: Задание 3](@next)
