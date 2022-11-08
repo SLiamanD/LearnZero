@@ -11,7 +11,7 @@ import Foundation
  Объявите переменную `userInputAge` типа `String` и присвойте ей значение "34e" для моделирования опечатки.  Затем определите константу `userAge` типа `Int` и используйте конструктор `Int` для преобразования `userInputAge`.  Какую ошибку вы получаете?
  */
 
-var userInputAge:String = "34ыы"
+var userInputAge:String = "34ee"
 let userAge:Int? = Int(userInputAge)
 
 
@@ -31,7 +31,7 @@ print("userAge = \(userAge) ( результат nil получается есл
 
 
 
-
+userInputAge = "55"
 
 /*:
  Используйте привязку опционалов для извлечения `userAge`.  Если `userAge` содержит значение, выведите его в консоль.
@@ -45,6 +45,9 @@ if let nonOptionalUserAge = userAge {
 /*:
  Теперь снова эмулируйте опечатку и попробуйте вывести на консоль целочисленное значение переменной `userInputAge`, при помощи оператора "!". Какую ошибку вы получите? Почему?
  */
+
+
+//userInputAge = "tt56"
 
 //print(userAge!)
 
