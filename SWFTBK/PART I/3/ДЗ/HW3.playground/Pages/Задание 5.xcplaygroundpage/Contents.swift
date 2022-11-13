@@ -18,17 +18,24 @@ import Foundation
  
  */
  
-let number:Int = 88005553535
+let number:Int = +78005553535
 let numberString:String = String(number)
 let characters = Array(numberString)
+var arrayOfnumber = [Int]()
+func integerToArrayOfInteger(integer:Int) -> Array<Int> {
+    var newArray = [Int]()
+    for i in String(integer) {
+        newArray.append(Int(String(i)) ?? 0)
+    }
+    return newArray
+}
+arrayOfnumber = integerToArrayOfInteger(integer: number)
 
-//var b = [Int]()
-//for i in characters {
-//
-//    if let z = Int(i) {
-//        b.append(z)
-//    }
-//}
+
+
+
+
+
 
 
 
