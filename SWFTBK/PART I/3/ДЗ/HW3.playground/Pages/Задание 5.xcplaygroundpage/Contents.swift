@@ -43,4 +43,9 @@ arrayOfnumber = integerToArrayOfInteger(integer: number)
 
 
 
+
+
+
+
+
 //: [Ранее: Задание 4](@previous)  |  задание 5 из 6  | [Далее: Задание 6](@next)
