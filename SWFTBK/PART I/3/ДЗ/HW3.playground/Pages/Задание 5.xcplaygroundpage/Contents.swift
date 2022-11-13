@@ -29,6 +29,7 @@ func integerToArrayOfInteger(integer:Int) -> Array<Int> {
     }
     return newArray
 }
+
 arrayOfnumber = integerToArrayOfInteger(integer: number)
 
 
