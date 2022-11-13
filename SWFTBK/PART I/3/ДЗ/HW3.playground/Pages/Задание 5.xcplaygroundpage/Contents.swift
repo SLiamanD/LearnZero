@@ -18,7 +18,7 @@ import Foundation
  
  */
  
-let number:Int = 88005553535
+let number:Int = +78005553535
 let numberString:String = String(number)
 let characters = Array(numberString)
 var arrayOfnumber = [Int]()
@@ -30,6 +30,7 @@ func integerToArrayOfInteger(integer:Int) -> Array<Int> {
     return newArray
 }
 arrayOfnumber = integerToArrayOfInteger(integer: number)
+
 
 
 
