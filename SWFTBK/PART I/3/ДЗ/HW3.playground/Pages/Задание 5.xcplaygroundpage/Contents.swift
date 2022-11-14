@@ -1,4 +1,5 @@
 import Foundation
+import Darwin
 
 /*:
  ### Задание 5
@@ -18,7 +19,7 @@ import Foundation
  
  */
  
-let number:Int = +78005553535
+let number:Int =  123456
 let numberString:String = String(number)
 let characters = Array(numberString)
 var arrayOfnumber = [Int]()
@@ -29,10 +30,25 @@ func integerToArrayOfInteger(integer:Int) -> Array<Int> {
     }
     return newArray
 }
+
 arrayOfnumber = integerToArrayOfInteger(integer: number)
 
+var quentityOfArray = arrayOfnumber.count
+
+var halfOfArray = quentityOfArray / 2
+
+var sumOfFirstHalf = [Int]()
 
 
+
+    
+while sumOfFirstHalf.count < halfOfArray {
+    for i in arrayOfnumber {
+    sumOfFirstHalf.append(i)
+    }
+}
+
+print(sumOfFirstHalf)
 
 
 
