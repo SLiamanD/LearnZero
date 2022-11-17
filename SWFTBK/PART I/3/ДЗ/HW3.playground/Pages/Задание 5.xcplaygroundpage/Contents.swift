@@ -38,17 +38,18 @@ var quentityOfArray = arrayOfnumber.count
 var halfOfArray = quentityOfArray / 2
 
 var sumOfFirstHalf = [Int]()
+var sumOfSecondHalf = [Int]()
 
 
+var i = 0
 
-    
 while sumOfFirstHalf.count < halfOfArray {
-    for i in arrayOfnumber {
-    sumOfFirstHalf.append(i)
-    }
+sumOfFirstHalf.append(arrayOfnumber[i])
+i += 1
 }
-
 print(sumOfFirstHalf)
+
+
 
 
 
