@@ -67,7 +67,7 @@ import Darwin
 //    print("сумма первой половины лотерейного билета не равна сумме второй половины лотерейного билета ")
 //}
 
-private func isLoterryNumberVictory(number:String) -> Bool{ //3 4 3 3
+private func isLoterryNumberVictory(number:String) -> Bool{
     let numberArr = Array(number)
     if(number.count % 2 != 0) {
         print("nechetnoe chislo")
@@ -77,14 +77,14 @@ private func isLoterryNumberVictory(number:String) -> Bool{ //3 4 3 3
     var firstHalfSum = 0
     var secondHalfSum = 0
     
-    for i in numberArr{
+    for i in numberArr {
         
-        if( numberArr[i] <= halfOfArr )
-            fisrsthalfsum =
-        
-            uf
+//        if numberArr[i] <= halfOfArr {
+//
+//        }
+
     }
-    
+ return false 
 }
 
 
