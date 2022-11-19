@@ -19,36 +19,73 @@ import Darwin
  
  */
  
-let number:Int =  123456
-let numberString:String = String(number)
-let characters = Array(numberString)
-var arrayOfnumber = [Int]()
-func integerToArrayOfInteger(integer:Int) -> Array<Int> {
-    var newArray = [Int]()
-    for i in String(integer) {
-        newArray.append(Int(String(i)) ?? 0)
+//let number:Int =  123456
+//let numberString:String = String(number)
+//let characters = Array(numberString)
+//var arrayOfnumber = [Int]()
+//func integerToArrayOfInteger(integer:Int) -> Array<Int> {
+//    var newArray = [Int]()
+//    for i in String(integer) {
+//        newArray.append(Int(String(i)) ?? 0)
+//    }
+//    return newArray
+//}
+//
+//arrayOfnumber = integerToArrayOfInteger(integer: number)
+//
+//var quentityOfArray = arrayOfnumber.count
+//
+//var halfOfArray = quentityOfArray / 2
+//
+//var arraySumOfFirstHalf = [Int]()
+//var arraySumOfSecondHalf = [Int]()
+//
+//
+//var counter = 0
+//while arraySumOfFirstHalf.count < halfOfArray {
+//arraySumOfFirstHalf.append(arrayOfnumber[counter])
+//counter += 1
+//}
+//print(arraySumOfFirstHalf)
+//arraySumOfSecondHalf = arrayOfnumber.filter { !arraySumOfFirstHalf.contains($0) }
+//print(arraySumOfSecondHalf)
+//
+//func sumElementInArray(arrayOfInteger:[Int]) -> Int {
+//    var sumOfElements = 0
+//    for i in arrayOfInteger {
+//        sumOfElements += i
+//    }
+//    return sumOfElements
+//}
+//
+//let SumOfFirstHalf = sumElementInArray(arrayOfInteger: arraySumOfFirstHalf)
+//let SumOfSecondHalf = sumElementInArray(arrayOfInteger: arraySumOfSecondHalf)
+//
+//if SumOfFirstHalf == SumOfSecondHalf {
+//    print("сумма первой половины лотерейного билета равна сумме второй половины лотерейного билета ")
+//} else {
+//    print("сумма первой половины лотерейного билета не равна сумме второй половины лотерейного билета ")
+//}
+
+private func isLoterryNumberVictory(number:String) -> Bool{ //3 4 3 3
+    let numberArr = Array(number)
+    if(number.count % 2 != 0) {
+        print("nechetnoe chislo")
+        return false
     }
-    return newArray
+    let halfOfArr = numberArr.count/2
+    var firstHalfSum = 0
+    var secondHalfSum = 0
+    
+    for i in numberArr{
+        
+        if( numberArr[i] <= halfOfArr )
+            fisrsthalfsum =
+        
+            uf
+    }
+    
 }
-
-arrayOfnumber = integerToArrayOfInteger(integer: number)
-
-var quentityOfArray = arrayOfnumber.count
-
-var halfOfArray = quentityOfArray / 2
-
-var sumOfFirstHalf = [Int]()
-var sumOfSecondHalf = [Int]()
-
-
-var i = 0
-
-while sumOfFirstHalf.count < halfOfArray {
-sumOfFirstHalf.append(arrayOfnumber[i])
-i += 1
-}
-print(sumOfFirstHalf)
-
 
 
 
