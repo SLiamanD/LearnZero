@@ -18,55 +18,73 @@ import Darwin
  5.2. Реализуйте ту же логику посредством if else
  
  */
- 
-//let number:Int =  123456
-//let numberString:String = String(number)
-//let characters = Array(numberString)
-//var arrayOfnumber = [Int]()
-//func integerToArrayOfInteger(integer:Int) -> Array<Int> {
-//    var newArray = [Int]()
-//    for i in String(integer) {
-//        newArray.append(Int(String(i)) ?? 0)
-//    }
-//    return newArray
-//}
-//
-//arrayOfnumber = integerToArrayOfInteger(integer: number)
-//
-//var quentityOfArray = arrayOfnumber.count
-//
-//var halfOfArray = quentityOfArray / 2
-//
-//var arraySumOfFirstHalf = [Int]()
-//var arraySumOfSecondHalf = [Int]()
-//
-//
-//var counter = 0
-//while arraySumOfFirstHalf.count < halfOfArray {
-//arraySumOfFirstHalf.append(arrayOfnumber[counter])
-//counter += 1
-//}
-//print(arraySumOfFirstHalf)
-//arraySumOfSecondHalf = arrayOfnumber.filter { !arraySumOfFirstHalf.contains($0) }
-//print(arraySumOfSecondHalf)
-//
-//func sumElementInArray(arrayOfInteger:[Int]) -> Int {
-//    var sumOfElements = 0
-//    for i in arrayOfInteger {
-//        sumOfElements += i
-//    }
-//    return sumOfElements
-//}
-//
-//let SumOfFirstHalf = sumElementInArray(arrayOfInteger: arraySumOfFirstHalf)
-//let SumOfSecondHalf = sumElementInArray(arrayOfInteger: arraySumOfSecondHalf)
-//
-//if SumOfFirstHalf == SumOfSecondHalf {
-//    print("сумма первой половины лотерейного билета равна сумме второй половины лотерейного билета ")
-//} else {
-//    print("сумма первой половины лотерейного билета не равна сумме второй половины лотерейного билета ")
-//}
 
+
+func doesWinOrLoseLotteryNumber(number: Int) -> Bool {
+    let numberString:String = String(number)
+    let characters = Array(numberString)
+    var arrayOfnumber = [Int]()
+    func integerToArrayOfInteger(integer:Int) -> Array<Int> {
+        var newArray = [Int]()
+        for i in String(integer) {
+            newArray.append(Int(String(i)) ?? 0)
+        }
+        return newArray
+    }
+
+    arrayOfnumber = integerToArrayOfInteger(integer: number)
+
+    var quentityOfArray = arrayOfnumber.count
+
+    var halfOfArray = quentityOfArray / 2
+
+    var arraySumOfFirstHalf = [Int]()
+    var arraySumOfSecondHalf = [Int]()
+
+
+    var counter = 0
+    while arraySumOfFirstHalf.count < halfOfArray {
+    arraySumOfFirstHalf.append(arrayOfnumber[counter])
+    counter += 1
+    }
+    print(arraySumOfFirstHalf)
+    arraySumOfSecondHalf = arrayOfnumber.filter { !arraySumOfFirstHalf.contains($0) }
+    print(arraySumOfSecondHalf)
+
+    func sumElementInArray(arrayOfInteger:[Int]) -> Int {
+        var sumOfElements = 0
+        for i in arrayOfInteger {
+            sumOfElements += i
+        }
+        return sumOfElements
+    }
+
+    let SumOfFirstHalf = sumElementInArray(arrayOfInteger: arraySumOfFirstHalf)
+    let SumOfSecondHalf = sumElementInArray(arrayOfInteger: arraySumOfSecondHalf)
+    
+    switch arrayOfnumber.count {
+    case 2,4,6,8: if SumOfFirstHalf == SumOfSecondHalf {
+        print("сумма первой половины лотерейного билета равна сумме второй половины лотерейного билета ")
+        return true
+    } else {
+        print("сумма первой половины лотерейного билета не равна сумме второй половины лотерейного билета ")
+        return false
+    }
+    default:
+        print("введите четное число количество цифр которого от 2 до 8")
+        return false
+    }
+
+    
+}
+doesWinOrLoseLotteryNumber(number: 22228000)
+
+
+
+
+
+
+/*
 private func isLoterryNumberVictory(number:String) -> Bool{
     let numberArr = Array(number)
     if(number.count % 2 != 0) {
@@ -86,12 +104,41 @@ private func isLoterryNumberVictory(number:String) -> Bool{
     }
  return false 
 }
+*/
 
 
 
 
 
+func ticket(number: Int) -> Bool {
+    
+    
+    let numberLot = String(number)
+    let range = numberLot.count
+    
+    let halfOfNumberLot = numberLot.count / 2
+    let num1 = numberLot.prefix(halfOfNumberLot)
+    let num2 = numberLot.suffix(halfOfNumberLot)
+    let sum1 = num1.map { Int(String($0)) ?? 0}.reduce(0,+)
+    let sum2 = num2.map { Int(String($0)) ?? 0}.reduce(0,+)
 
+    
+    let result = sum1 == sum2
+    
+    switch range {
+    case 2,4,6,8:
+        if result {
+            print(true)
+        } else {
+            print(false)
+        }
+    default: print("Введите четное количество цифр от 2 до 8")
+    }
+    return result
+}
+
+
+ticket(number: 222060)
 
 
 
