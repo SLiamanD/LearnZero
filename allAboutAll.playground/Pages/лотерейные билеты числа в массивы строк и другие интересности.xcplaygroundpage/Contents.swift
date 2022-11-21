@@ -1,3 +1,26 @@
+func loter(number: Int) -> Bool {
+    
+    
+    let numberLot = String(number)
+    let halfOfNumberLot = numberLot.count / 2
+    let num1 = numberLot.prefix(halfOfNumberLot)
+    let num2 = numberLot.suffix(halfOfNumberLot)
+    let sum1 = num1.map { Int(String($0)) ?? 0}.reduce(0,+)
+    let sum2 = num2.map { Int(String($0)) ?? 0}.reduce(0,+)
+    
+    let result = sum1 == sum2
+    if result {
+        print(true)
+    } else {
+        print(false)
+    }
+    return result
+}
+
+loter(number: 4344)
+
+
+
 import Foundation
 import Darwin
 
@@ -18,73 +41,6 @@ import Darwin
  5.2. Реализуйте ту же логику посредством if else
  
  */
-
-
-
-var phoneNumber:String
-phoneNumber = "45345346453452345235"
-let phoneNumberLength = 12
-let phoneNumberPrefix = "+7"
-switch phoneNumber.count {
-case phoneNumberLength where phoneNumber.starts(with: phoneNumberPrefix):
-    print("номер российский")
-case ..<phoneNumberLength:
-    print("сократите номер на \(phoneNumberLength - phoneNumber.count) символов")
-case (phoneNumberLength+1)...:
-    print("дополните номер на \(phoneNumber.count - phoneNumberLength) символов")
-default:
-    print("номер не российский")
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//let day = 2
-//let friday = 5
-//
-//switch day {
-//case 1: print("Monday")
-//case 2 where friday != 2: print ("Tuesday")
-//fallthrough
-//case 3: print("Wednesday")
-//case 4: print("Thursday")
-//case 5: print("Friday")
-//case 6: print("Saturday")
-//case 7: print("Sunday")
-//default: print("Вы за пределами сознания.")
-//}
-
-
-
 
 
 func doesWinOrLoseLotteryNumber(number: Int) -> Bool {
@@ -169,7 +125,7 @@ private func isLoterryNumberVictory(number:String) -> Bool{
 //        }
 
     }
- return false 
+ return false
 }
 */
 
@@ -217,3 +173,5 @@ ticket(number: 222060)
 
 
 //: [Ранее: Задание 4](@previous)  |  задание 5 из 6  | [Далее: Задание 6](@next)
+
+
