@@ -22,16 +22,16 @@ import Darwin
 
 
 var phoneNumber:String
-phoneNumber = "45345346453452345235"
+phoneNumber = "+73358888888"
 let phoneNumberLength = 12
 let phoneNumberPrefix = "+7"
 switch phoneNumber.count {
 case phoneNumberLength where phoneNumber.starts(with: phoneNumberPrefix):
     print("номер российский")
 case ..<phoneNumberLength:
-    print("сократите номер на \(phoneNumberLength - phoneNumber.count) символов")
+    print("дополните номер на \(phoneNumberLength - phoneNumber.count) символов")
 case (phoneNumberLength+1)...:
-    print("дополните номер на \(phoneNumber.count - phoneNumberLength) символов")
+    print("сократите номер на \(phoneNumber.count - phoneNumberLength) символов")
 default:
     print("номер не российский")
 }
