@@ -18,6 +18,17 @@ import Foundation
  6.6 Создайте константу типа CurrencyUnit, задайте ей значение доллара Канады.
  */
 
+enum CalculationType {
+    case addition
+    case subtraction
+    case multiplication
+    case division
+}
+
+
+
+
+
 
 //: [Ранее: Задание 5](@previous)  |  задание 6 из 6  |
 
