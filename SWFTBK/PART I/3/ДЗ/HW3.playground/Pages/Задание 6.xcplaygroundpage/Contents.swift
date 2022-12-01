@@ -25,6 +25,14 @@ enum CalculationType {
     case division
 }
 
+let one = 1
+let two = 2
+var mathOperation:CalculationType
+
+
+
+
+
 
 
 
