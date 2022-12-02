@@ -29,6 +29,10 @@ let one = 1
 let two = 2
 var mathOperation:CalculationType
 
+var result:Int = one
+
+
+
 
 
 
