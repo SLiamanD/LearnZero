@@ -38,4 +38,10 @@ default:
 
 
 
+if phoneNumber.hasPrefix(phoneNumberPrefix) && phoneNumber.count == phoneNumberLength {
+    print("номер российский")
+}
+
+
+
 //: [Ранее: Задание 4](@previous)  |  задание 5 из 6  | [Далее: Задание 6](@next)
