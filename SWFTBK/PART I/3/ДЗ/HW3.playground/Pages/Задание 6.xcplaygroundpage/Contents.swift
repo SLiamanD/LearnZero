@@ -47,5 +47,6 @@ case .subtraction: result -= two
 
 
 
+
 //: [Ранее: Задание 5](@previous)  |  задание 6 из 6  |
 
