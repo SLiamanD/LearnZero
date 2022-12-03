@@ -18,20 +18,25 @@ import Foundation
  6.6 Создайте константу типа CurrencyUnit, задайте ей значение доллара Канады.
  */
 
-enum CalculationType {
-    case addition
-    case subtraction
-    case multiplication
-    case division
+enum CalculationType:String {
+    case addition = "сложение"
+    case subtraction = "вычитание"
+    case multiplication = "умножение"
+    case division = "деление"
 }
 
 let one = 1
 let two = 2
-var mathOperation:CalculationType
+var mathOperation:CalculationType = .addition
 
 var result:Int = one
 
-
+switch mathOperation {
+case .addition: result += two
+case .division: result != 0 ? result /= two : print("can't divide by zero")
+case .multiplication: result *= two
+case .subtraction: result -= two
+}
 
 
 
