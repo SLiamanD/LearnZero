@@ -40,6 +40,10 @@ default:
 
 if phoneNumber.hasPrefix(phoneNumberPrefix) && phoneNumber.count == phoneNumberLength {
     print("номер российский")
+} else if phoneNumber.count > phoneNumberLength  {
+    print("сократите номер на \(phoneNumber.count - phoneNumberLength) символов")
+} else if phoneNumber.count < phoneNumberLength {
+    print("дополните номер на \(phoneNumberLength - phoneNumber.count) символов")
 }
 
 
