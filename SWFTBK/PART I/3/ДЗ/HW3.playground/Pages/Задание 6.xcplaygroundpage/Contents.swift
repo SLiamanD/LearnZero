@@ -40,11 +40,22 @@ case .subtraction: result -= two
 
 
 
+enum CurrencyUnit {
+    case rouble
+    case dollar(national:DollarCountries)
+    case euro
+    
+    
+    
+    enum DollarCountries {
+        case USA
+        case Canada
+        case Australia
+    }
+    
+}
 
-
-
-
-
+let currency: CurrencyUnit = .dollar(national: .Canada)
 
 
 
